@@ -1,0 +1,23 @@
+<!--pages/newAu/newAu.wxml-->
+<view class="wrapper">
+  <view class="mu_box">
+    <view class="mu_info">
+      <view class="mu_imagediv">
+        <image class="mu_image" src="../resource/static/image/CloudAndSea.jpg"></image>
+      </view>
+      <view class="mu_timeshow">
+        <view>
+          {{musicName}}-{{musicAuthor}}
+        </view>
+      </view>
+    </view>
+    <view class="mu_sliderbox">
+      <slider class="mu_slider" block-size="16" value="{{myAudioPos}}" bindchange="handlerSliderChange"></slider>
+      <view style="float:left">{{musicCurrent}}</view>
+      <view style="float:right">{{musicDuration}}</view>
+    </view>
+  </view>
+
+  <button type="primary" bindtap="play">播放</button>
+  <button type="primary" bindtap="pause" style="margin-top:40rpx">暂停</button>
+</view>

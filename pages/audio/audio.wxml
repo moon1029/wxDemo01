@@ -1,0 +1,11 @@
+<view class="wrapper">
+  <view class="au_audio">
+    <audio id="myAudio" controls="true" poster="{{postUrl}}" src="{{audioSrc}}" name="云与海" author="阿Yue"></audio>
+  </view>
+  <view class="au_button">
+    <button type="primary" bindtap="play">播放</button>
+    <button type="primary" bindtap="pause">暂停</button>
+    <button type="primary" bindtap="restart">从头开始</button>
+    <button type="primary" bindtap="setTime">设置播放时间</button>
+  </view>
+</view>

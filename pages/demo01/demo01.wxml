@@ -1,0 +1,9 @@
+<!--pages/demo01/demo01.wxml-->
+
+<demo02 sonData="{{testWord}}" bindsendEvent="receiveValue" />
+<view wx:if="{{showMsg}}">{{message}}</view>
+<!-- item可以自定义，key要绑定 -->
+<view wx:for="{{array}}" wx:key="index" wx:for-item="item">
+	<text>{{item.name}}</text>
+</view>
+<button bindtap="changeMsgState">demo1按钮</button>

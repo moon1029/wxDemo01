@@ -1,0 +1,5 @@
+<!--pages/demo3/demo3.wxml-->
+<import src="../demo4/demo4.wxml"/>
+<include src="../demo4/demo4.wxml"/>
+<view>hello!</view>
+<template is="demo4" data="{{text:'demo3给demo4传的值'}}"></template>

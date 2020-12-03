@@ -1,0 +1,25 @@
+{
+  "pages": [
+    "pages/newAu/newAu",
+    "pages/audio/audio",
+    "pages/demo3/demo3",
+    "pages/demo01/demo01",
+    "pages/demo02/demo02",
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/demo4/demo4"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "徐琳钰的小demo",
+    "navigationBarTextStyle": "black"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

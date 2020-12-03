@@ -1,0 +1,7 @@
+/* pages/audio/audio.wxss */
+.wrapper {
+  padding: 20rpx;
+}
+/* .au_audio {
+  text-align: center;
+} */

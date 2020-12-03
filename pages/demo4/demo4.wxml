@@ -1,0 +1,6 @@
+<!--pages/demo4/demo4.wxml-->
+<view>hello everyone!</view>
+<template name="demo4">
+  <text>{{text}}</text>
+</template>
+

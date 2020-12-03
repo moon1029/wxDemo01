@@ -1,0 +1,5 @@
+<!--pages/demo02/demo02.wxml-->
+<view>
+	<view>{{sonData}}</view>
+  <button bindtap="sendMesgToFather" size="small" type="primary">demo2</button>
+</view>
