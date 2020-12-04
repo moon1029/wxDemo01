@@ -16,8 +16,11 @@
       <view style="float:left">{{musicCurrent}}</view>
       <view style="float:right">{{musicDuration}}</view>
     </view>
+    <view class="mu_button">
+      <view class="iconfont icon-shangyishou" bindtap="pre"></view>
+      <view class="iconfont icon-icon_play" wx:if="{{isPlay===false}}" bindtap="play"></view>
+      <view class="iconfont icon-zanting" wx:if="{{isPlay===true}}" bindtap="pause"></view>
+      <view class="iconfont icon-xiayishou" bindtap="next"></view>
+    </view>
   </view>
-
-  <button type="primary" bindtap="play">播放</button>
-  <button type="primary" bindtap="pause" style="margin-top:40rpx">暂停</button>
 </view>

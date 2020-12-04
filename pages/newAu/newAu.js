@@ -1,6 +1,5 @@
 // pages/newAu/newAu.js
 const innerAudioContext = wx.createInnerAudioContext()
-innerAudioContext.autoplay = true
 Page({
 
   /**
@@ -10,16 +9,20 @@ Page({
     musicName: "云与海",
     musicAuthor: "阿YUE",
     musicDuration: "",
-    musicCurrent: ""
+    musicCurrent: "",
+    isPlay: false
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    innerAudioContext.autoplay = true
-    innerAudioContext.src = "http://isure.stream.qqmusic.qq.com/C400004IFjwP42XBGI.m4a?guid=8054457740&vkey=A8B030C5018FABE584A653F4131774E829E5ACE7CFA63DA6F89714F0BF1A4962FD3D84E8DDF594088DF50B46453510E8298760E167923C19&uin=7506&fromtag=66"
+    // innerAudioContext.autoplay = true
+    innerAudioContext.src = "http://isure.stream.qqmusic.qq.com/C400004IFjwP42XBGI.m4a?guid=8054457740&vkey=891A74FE49B173EC235BEA20F285D7A5EAC555689DC66F096372A730B8A6606C06D57DF3264CD4A4ACC51829040C6E8E582A3B0BAC55E961&uin=0&fromtag=66"
     innerAudioContext.onPlay(() => {
+      this.setData({
+        isPlay: true
+      })
       console.log("正在播放")
     })
     innerAudioContext.onError((res) => {
@@ -30,6 +33,9 @@ Page({
       console.log(res.errMsg)
     })
     innerAudioContext.onPause(() => {
+      this.setData({
+        isPlay: false
+      })
       console.log("停止播放")
     })
     // 在onCanplay里获取并设置音频时长和播放进度
@@ -92,9 +98,13 @@ Page({
   onShareAppMessage: function () {
 
   },
+  //播放
   play() {
     innerAudioContext.startTime = this.data.musicCurrent;
     innerAudioContext.play()
+    this.setData({
+      isPlay: true
+    })
     innerAudioContext.onTimeUpdate(() => {
       this.setData({
         myAudioPos: innerAudioContext.currentTime / innerAudioContext.duration * 100,
@@ -102,8 +112,26 @@ Page({
       })
     })
   },
+  //暂停
   pause() {
     innerAudioContext.pause()
+    this.setData({
+      isPlay: false
+    })
+  },
+  //点击听取上一首
+  pre() {
+    wx.showToast({
+      icon:'none',
+      title: '此功能暂未开放',
+    })
+  },
+  //点击听取上一首
+  next() {
+    wx.showToast({
+      icon:'none',
+      title: '此功能暂未开放',
+    })
   },
   //拖动进度条到指定位置
   handlerSliderChange(e) {
